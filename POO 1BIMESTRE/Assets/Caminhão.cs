@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Caminhão : carro
+public class Caminhao : Carro
 {
     private string tipo_de_carroceria;
 

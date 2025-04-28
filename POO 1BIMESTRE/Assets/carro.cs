@@ -1,7 +1,7 @@
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class carro
+public class Carro
 {
     private string nome;
     private int numero_de_rodas;
@@ -49,7 +49,7 @@ public class carro
         this.preco = preco;
     }
 
-    public bool ComparePreco(carro carro)
+    public bool ComparePreco(Carro carro)
         {
 
         if (this.preco > carro.getpreco())
