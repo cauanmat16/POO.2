@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Inimigo : personagem
+public class Inimigo : Personagem
 {
     [SerializeField]
     private string armadura;
@@ -34,14 +34,14 @@ public class Inimigo : personagem
         switch (arma)
         {
             case "ESPADA":
-                dano = forca_ataque() + 10;
+                dano = Forca_ataque() + 10;
                 break;
             case "MACHADO":
-                dano = forca_ataque() + 18;
+                dano = Forca_ataque() + 18;
                 break;
             case "ADAGA":
-                dano = forca_ataque() + 5;
-                break; 
+                dano = Forca_ataque() + 5;
+                break;
                 
         }
         
@@ -49,5 +49,3 @@ public class Inimigo : personagem
         return 0;
     }
 }
- 
-

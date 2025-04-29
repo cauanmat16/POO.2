@@ -1,43 +1,91 @@
-using UnityEditor;
 using UnityEngine;
 
-public class personagem : MonoBehaviour
+public class Personagem : MonoBehaviour
 {
+    [SerializeField] 
     private string nome;
-    private int energia;   
+    [SerializeField]
+    private int energia;
+    [SerializeField]
     private int forca_ataque;
+    [SerializeField]
+    private float forca_do_pulo;
+    [SerializeField]
     private float velocidade;
-    private int numero_pes;
+    [SerializeField]
+    private int numero_de_pes;
+    [SerializeField]
     private int numero_de_maos;
 
-    public void setNome(string nome)
+    public void SetNome(string nome)
     {
         this.nome = nome;
     }
-
     public string Nome()
     {
         return this.nome;
     }
-
-    public void setEnergia(int energia)
+    
+    
+    public void SetEnergia(int energia)
     {
         this.energia = energia;
     }
-
     public string Energia()
     {
         return this.Energia();
     }
 
-    public void SetForca_ataque(int forca_ataque)
+    
+    public void setForca_ataque(int forca_ataque)
     {
         this.forca_ataque = forca_ataque;
+    }
+    public int Forca_ataque()
+    {
+        return this.forca_ataque;
+    }
+
+
+    public void setForca_do_pulo(float forca_do_pulo)
+    {
+        this.forca_do_pulo = forca_do_pulo;
     }
 
     public float Forca_do_pulo()
     {
-        return this.Forca_do_pulo();
+        return this.forca_do_pulo;
     }
-}
 
+
+    public void setVelocidade(float velocidade)
+    {
+        this.velocidade = velocidade;
+    }
+    public float Velocidade()
+    {
+        return this.velocidade;
+    }
+
+    
+    public void setNumero_de_pes(int numero_de_pes)
+    {
+        this.numero_de_pes = numero_de_pes;
+    }
+    public int Numero_de_pes()
+    {
+        return this.numero_de_pes;
+    }
+
+
+    public void setNumero_de_maos(int numero_de_maos)
+    {
+        this.numero_de_maos = numero_de_maos;
+    }
+
+    public int Numero_de_maos()
+    {
+        return this.numero_de_maos;
+    }
+    
+}
