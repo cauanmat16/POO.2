@@ -46,6 +46,6 @@ public class Inimigo : Personagem
         }
         
         //dano do ataque com a arma
-        return 0;
+        return dano;
     }
 }

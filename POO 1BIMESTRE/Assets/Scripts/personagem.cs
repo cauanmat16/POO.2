@@ -31,9 +31,9 @@ public class Personagem : MonoBehaviour
     {
         this.energia = energia;
     }
-    public string Energia()
+    public int Energia()
     {
-        return this.Energia();
+        return this.energia;
     }
 
     
