@@ -4,11 +4,12 @@ public class Player : MonoBehaviour
 {
    private Rigidbody _rigidbody;
    
-   public float velocidade = 10;
+   public float velocidade;
    
    
     void Start()
     {
+        velocidade = gameObject.GetComponent<Personagem>().Velocidade();
         _rigidbody = GetComponent<Rigidbody>();
     }
     
@@ -41,7 +42,7 @@ public class Player : MonoBehaviour
         //baixo Z-
         if(Input.GetKey(KeyCode.S))
         {
-            posicao.z = transform.position.z - velocidade * Time.deltaTime;
+            posicao.z = transform.position.z + velocidade * Time.deltaTime;
         }
         
             
