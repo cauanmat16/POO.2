@@ -5,7 +5,7 @@ public class Movimentoinimigo : MonoBehaviour
     private GameObject _player;
     private Rigidbody2D _rigidbody;
     private float velocidade;
-    public float raioDeVisao;
+    public float raioDeVisao = 20;
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
