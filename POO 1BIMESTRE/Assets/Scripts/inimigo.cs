@@ -2,30 +2,41 @@ using UnityEngine;
 
 public class Inimigo : Personagem
 {
-    [SerializeField]
-    private string armadura;
-    [SerializeField]
-    private string arma;
+    public enum ArmaDoInimigo
+    {
+        ESPADA, MACHADO, ADAGA
+    }
 
-    public void SetArmadura(string armadura)
+    public enum ArmaduraDoInimigo
+    {
+        MADEIRA, COURO, BRONZE, ACO
+    }
+
+    [ SerializeField ]
+    private ArmaduraDoInimigo armadura;
+    [ SerializeField ]
+    private ArmaDoInimigo arma;
+
+    public void AtribuirArmadura(ArmaduraDoInimigo armadura)
     {
         this.armadura = armadura;
     }
 
-    public string Armadura()
+    public ArmaduraDoInimigo Armadura()
     {
-        return armadura;
+        return this.armadura;
     }
-    
-    public void SetArma(string arma)
+
+    public void AtribuirArma(ArmaDoInimigo arma)
     {
         this.arma = arma;
     }
 
-    public string Arma()
+    public ArmaDoInimigo Arma()
     {
-        return arma;
+        return this.arma;
     }
+
 
     public int DanoDoInimigo()
     {
@@ -33,19 +44,42 @@ public class Inimigo : Personagem
 
         switch (arma)
         {
-            case "ESPADA":
-                dano = Forca_ataque() + 10;
+            case ArmaDoInimigo.ESPADA:
+                dano = Forca_Ataque() + 10;
                 break;
-            case "MACHADO":
-                dano = Forca_ataque() + 18;
+            case ArmaDoInimigo.MACHADO:
+                dano = Forca_Ataque() + 18;
                 break;
-            case "ADAGA":
-                dano = Forca_ataque() + 5;
+            case ArmaDoInimigo.ADAGA:
+                dano = Forca_Ataque() + 5;
                 break;
-                
         }
         
-        //dano do ataque com a arma
+        // dano do ataque com a arma
+        
         return dano;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    void Start()
+    {
+        
+    }
+    void Update()
+    {
+        
     }
 }

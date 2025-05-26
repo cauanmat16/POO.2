@@ -1,53 +1,55 @@
+using System.Collections;
+using UnityEditor;
 using UnityEngine;
 
 public class Personagem : MonoBehaviour
 {
-    [SerializeField] 
+    [ SerializeField ]
     private string nome;
-    [SerializeField]
+    [ SerializeField ]
     private int energia;
-    [SerializeField]
+    [ SerializeField ]
     private int forca_ataque;
-    [SerializeField]
+    [ SerializeField ]
     private float forca_do_pulo;
-    [SerializeField]
+    [ SerializeField ]
     private float velocidade;
-    [SerializeField]
+    [ SerializeField ]
     private int numero_de_pes;
-    [SerializeField]
+    [ SerializeField ]
     private int numero_de_maos;
 
-    public void SetNome(string nome)
+    public void AtribuirNome(string nome)
     {
         this.nome = nome;
     }
+
     public string Nome()
     {
         return this.nome;
     }
-    
-    
-    public void SetEnergia(int energia)
+
+    public void AtribuirEnergia(int energia)
     {
         this.energia = energia;
     }
+
     public int Energia()
     {
         return this.energia;
     }
 
-    
-    public void setForca_ataque(int forca_ataque)
+    public void AtribuirForca_Ataque(int forca_ataque)
     {
         this.forca_ataque = forca_ataque;
     }
-    public int Forca_ataque()
+
+    public int Forca_Ataque()
     {
         return this.forca_ataque;
     }
 
-
-    public void setForca_do_pulo(float forca_do_pulo)
+    public void AtribuirForca_do_pulo(float forca_do_pulo)
     {
         this.forca_do_pulo = forca_do_pulo;
     }
@@ -58,27 +60,27 @@ public class Personagem : MonoBehaviour
     }
 
 
-    public void setVelocidade(float velocidade)
+    public void AtribuirVelocidade(float velocidade)
     {
         this.velocidade = velocidade;
     }
+
     public float Velocidade()
     {
         return this.velocidade;
     }
 
-    
-    public void setNumero_de_pes(int numero_de_pes)
+    public void AtribuitNumero_de_pes(int numero_de_pes)
     {
         this.numero_de_pes = numero_de_pes;
     }
+
     public int Numero_de_pes()
     {
         return this.numero_de_pes;
     }
 
-
-    public void setNumero_de_maos(int numero_de_maos)
+    public void AtribuitNumero_de_maos(int numero_de_maos)
     {
         this.numero_de_maos = numero_de_maos;
     }
@@ -87,5 +89,17 @@ public class Personagem : MonoBehaviour
     {
         return this.numero_de_maos;
     }
-    
+
+
+
+
+
+    void Start()
+    {
+        
+    }
+    void Update()
+    {
+        
+    }
 }
